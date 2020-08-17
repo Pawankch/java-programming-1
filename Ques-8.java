@@ -12,7 +12,7 @@ class MyException extends Exception
 
 public class CustomException {
 	
-	float cal(float n) 
+	float conv(float n) 
 	{
 		return (float) (0.67*n);
 	}
@@ -21,7 +21,7 @@ public class CustomException {
 		CustomException n=new CustomException();
 		Scanner sc=new Scanner(System.in);
 		float num=0.0f;
-		
+		System.out.println("Enter Number");
 		try
 		{
 		    num=sc.nextFloat();
@@ -32,7 +32,7 @@ public class CustomException {
 		{
 			throw new MyException(e);
 		}
-		System.out.println(n.cal(num));
+		System.out.println(n.conv(num));
 	}
 
 }
